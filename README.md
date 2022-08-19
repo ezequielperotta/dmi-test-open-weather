@@ -13,8 +13,7 @@ Using the Fastify framework, implement an endpoint that allows the API client to
 
 ## Project structure
 
-I followed the pattern ands generate a project with the same
-structure by using [fastify-cli](https://github.com/fastify/fastify-cli).
+I followed the pattern generator to create the project using [fastify-cli](https://github.com/fastify/fastify-cli).
 
 ## How to run this project
 
@@ -48,7 +47,7 @@ structure by using [fastify-cli](https://github.com/fastify/fastify-cli).
 
    ![img.png](img.png)
    
-5. Get to swagger documentation:
+5. Swagger documentation:
 
     ```sh
     http://localhost:3000/docs/index.html
