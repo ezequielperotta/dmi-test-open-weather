@@ -1,13 +1,9 @@
-export const getStatusWeather = {
+export const getStatusWeatherSchema = {
 	summary: 'Status Weather',
 	description: 'Status weather -> Return true if the temperature is greatste than 15',
-	params: {
-		type: 'object',
-		required: ['lat', 'lon'],
-		properties: {
-			lat: { type: 'string' },
-			lon: { type: 'string' },
-		}
+	querystring: {
+		lat: { type: 'string' },
+		lon: { type: 'string' },
 	},
 	response: {
 		200: {

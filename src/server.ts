@@ -1,6 +1,5 @@
 import fastify from 'fastify';
-
-import statusWeather from './modules/statusWeather/routes';
+import routes from './routes';
 
 function createServer() {
 	const server = fastify();
@@ -24,7 +23,7 @@ function createServer() {
 		}
 	});
 
-	server.register(statusWeather, { prefix: '/status/weather' });
+	server.register(routes, { prefix: '/status/weather' });
 
 	server.setErrorHandler((error, req, res) => {
 		req.log.error(error);
