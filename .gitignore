@@ -1,0 +1,14 @@
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+coverage/
+
+/.idea/.gitignore
+/.idea/codeStyles/Project.xml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/dmi-test.iml
+/.idea/inspectionProfiles/Project_Default.xml
