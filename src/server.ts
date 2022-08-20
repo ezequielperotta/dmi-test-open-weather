@@ -1,10 +1,11 @@
 import fastify from 'fastify';
 import routes from './routes';
 
-function createServer() {
+const createServer = () => {
 	const server = fastify();
-	server.register(require('fastify-cors'));
 
+	server.register(require('fastify-cors'));
+	server.register(require('./plugins/cache'));
 	server.register(require('fastify-oas'), {
 		routePrefix: '/docs',
 		exposeRoute: true,
@@ -24,13 +25,13 @@ function createServer() {
 	});
 
 	server.register(routes, { prefix: '/status/weather' });
-
+	
 	server.setErrorHandler((error, req, res) => {
 		req.log.error(error);
 		res.send({ error: error.message });
 	});
 
 	return server;
-}
+};
 
 export default createServer;
