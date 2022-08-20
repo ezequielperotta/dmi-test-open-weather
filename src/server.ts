@@ -25,7 +25,7 @@ const createServer = () => {
 	});
 
 	server.register(routes, { prefix: '/status/weather' });
-	
+
 	server.setErrorHandler((error, req, res) => {
 		req.log.error(error);
 		res.send({ error: error.message });

@@ -1,5 +1,5 @@
-import { getStatusWeatherSchema } from '../schemas/statusWeather';
-import { statusWeatherService } from '../servicies';
+import { getStatusWeatherSchema } from '../schemas/statusWeather.schema';
+import { statusWeatherService } from '../servicies/statusWeather.service.';
 
 export const statusWeatherController = {
 	schema: getStatusWeatherSchema,
