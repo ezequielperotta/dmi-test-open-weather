@@ -1,16 +1,10 @@
-import { getStatusWeatherSchema } from '../schemas/statusWeather.schema';
-import { statusWeatherService } from '../servicies/statusWeather.service.';
+import { statusWeatherService } from '../servicies/statusWeather.service';
 
-export const statusWeatherController = {
-	schema: getStatusWeatherSchema,
-	handler: async (req, res) => {
-		const lat = req.query.lat;
-		const lon = req.query.lon;
-		try {
-			const response  = await statusWeatherService(lat, lon);
-			res.send(response);
-		} catch (e) {
-			throw new Error(e);
-		}
-	},
+export const statusWeatherController = async (req, res) => {
+	try {
+		const response  = await statusWeatherService(req.query.lat, req.query.lon);
+		res.send(response);
+	} catch (e) {
+		throw new Error(e);
+	}
 };
